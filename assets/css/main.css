@@ -1,0 +1,52 @@
+/* ********** GENERAL ********** */
+body {
+	box-sizing:border-box;
+	background-color:#fff4c8;
+	overflow:hidden;
+}
+
+div.col-md-12 {
+
+	width:600px;
+	margin:0 auto;
+}
+
+div.row {
+	width:50%;
+	margin:0 auto;
+}
+
+div#text {
+	margin-top:42%;
+}
+
+/* ********** NAVBAR ********** */
+.navbar-inverse {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+}
+
+#logo {
+	position:relative;
+
+	height:auto;
+	width:300px;
+	margin-left:50px;
+}
+
+/* ********** TEXT ********** */
+p {
+	font-family: 'Cuprum', sans-serif;
+	font-size:20px;
+}
+
+/* ********** IMAGES ********** */
+#tsugidoka {
+	position:absolute;
+	bottom:0;
+	right:50px;
+	width:220px;
+}
