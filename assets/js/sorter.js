@@ -1,402 +1,372 @@
 $(document).ready(function(){
 
 	// array of characters unsorted
-	// var popnUnsorted = ["2st", "Albireo", "Black", "Chinatsu",
-	// "DTO", "Eito", "Elenoa", "Fili", "Fuga", "Goku-Sotsu-Kun",
-	// "Hiumi", "Izumi Ibuki", "Jade", "Kasuga Sakiko", "Maud",
-	// "Meu Meu", "Miho", "Milk", "Mimi", "Minit's", "MZD", "Nia",
-	// "Nyami", "Retsu", "Rinka", "Risette", "Roki", "Roku", "Ryuta",
-	// "Shimotsuki Rin", "Smoke", "Sora Hoshino", "Sumire", "Usanuko",
-	// "VENUS", "Yamagata Marika", "Yuli", "Zizz", "Akane", "Date Kyouya",
-	// "Eclipse", "Harpya", "Gerhard", "Glutamine", "iO-Lower", "Jadeite",
-	// "Kirishima Tsukasa", "Kiryu", "Lazuli", "Madoka", "Matsushita",
-	// "Michiru", "Miyu", "Nicolas", "Phantom", "Ranma", "Rars", 
-	// "Shinonome Kokona", "Shinonome Natsuhi", "Suiri", "Taiga",
-	// "Takuto", "Toa", "Weiss", "Wolfgang", "Yuzuru"
-	// ];
+	var popnUnsorted = [
+		{
+			name: "2st",
+			img: "assets/images/2st.png",
+			pts: 0
 
-	// var popnUnsorted = [
-	// 	{
-	// 		name: "2st",
-	// 		img:,
-	// 		pts:
-
-	// 	},
-	// 	{
-	// 		name:"Albireo",
-	// 		img:,
-	// 		pts:		
-	// 	},
-	// 	{
-	// 		name:"Black",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Chinatsu",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"DTO",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Eito",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Elenoa",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Fili",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Fuga",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Goku-Sotsu-Kun",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Hiumi",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Izumi Ibuki",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Jade",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Kasuga Sakiko",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Maud",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Meu Meu",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Miho",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Milk",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Mimi",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Minit's",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"MZD",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Nia",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Nyami",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Retsu",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Rinka",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Risette",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Roki",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Roku",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Ryuta",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Shimotsuki Rin",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Smoke",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Sora Hoshino",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Sumire",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Usanuko",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"VENUS",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Yamagata Marika",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Yuli",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Zizz",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Akane",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Date Kyouya",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Eclipse",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Harpya",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Gerhard",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Glutamine",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"iO-Lower",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Jadeite",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Kirishima Tsukasa",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Kiryu",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Lazuli",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Madoka",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Matsushita",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Michiru",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Miyu",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Nicolas",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Phantom",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Ranma",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Rars",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Shinonome Kokona",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Shinonome Natsuhi",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Suiri",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Taiga",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Takuto",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Toa",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Weiss",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Wolfgang",
-	// 		img:,
-	// 		pts:
-	// 	},
-	// 	{
-	// 		name:"Yuzuru",
-	// 		img:,
-	// 		pts:
-	// 	},
+		},
+		{
+			name:"Albireo",
+			img:"assets/images/albireo.png",
+			pts: 0
+		},
+		{
+			name:"Black",
+			img:"assets/images/black.png",
+			pts: 0
+		},
+		{
+			name:"Chinatsu",
+			img:"assets/images/chinatsu.png",
+			pts: 0
+		},
+		{
+			name:"DTO",
+			img:"assets/images/dto.png",
+			pts: 0
+		},
+		{
+			name:"Eito",
+			img:"assets/images/eito.png",
+			pts: 0
+		},
+		{
+			name:"Elenoa",
+			img:"assets/images/elenoa.png",
+			pts: 0
+		},
+		{
+			name:"Fili",
+			img: "assets/images/fili.png",
+			pts: 0
+		},
+		{
+			name:"Fuga",
+			img:"assets/images/fuga.png",
+			pts: 0
+		},
+		{
+			name:"Goku-Sotsu-Kun",
+			img:"assets/images/goku-sotsu-kun.png",
+			pts: 0
+		},
+		{
+			name:"Hiumi",
+			img:"assets/images/hiumi.png",
+			pts: 0
+		},
+		{
+			name:"Izumi Ibuki",
+			img:"assets/images/izumi.png",
+			pts: 0
+		},
+		{
+			name:"Jade",
+			img:"assets/images/jade.png",
+			pts: 0
+		},
+		{
+			name:"Kasuga Sakiko",
+			img:"assets/images/kasuga.png",
+			pts: 0
+		},
+		{
+			name:"Maud",
+			img:"assets/images/maud.png",
+			pts: 0
+		},
+		{
+			name:"Meu Meu",
+			img:"assets/images/meumeu.png",
+			pts: 0
+		},
+		{
+			name:"Miho",
+			img: "assets/images/miho.png",
+			pts: 0
+		},
+		{
+			name:"Milk",
+			img:"assets/images/milk.png",
+			pts: 0
+		},
+		{
+			name:"Mimi",
+			img:"assets/images/mimi.png",
+			pts: 0
+		},
+		{
+			name:"Minit's",
+			img:"assets/images/minits.png",
+			pts: 0
+		},
+		{
+			name:"MZD",
+			img:"assets/images/mzd.png",
+			pts: 0
+		},
+		{
+			name:"Nia",
+			img:"assets/images/nia.png",
+			pts: 0
+		},
+		{
+			name:"Nyami",
+			img:"assets/images/nyami.png",
+			pts: 0
+		},
+		{
+			name:"Retsu",
+			img:"assets/images/retsu.png",
+			pts: 0
+		},
+		{
+			name:"Rinka",
+			img:"assets/images/rinka.png",
+			pts: 0
+		},
+		{
+			name:"Risette",
+			img:"assets/images/risette.png",
+			pts: 0
+		},
+		{
+			name:"Roki",
+			img:"assets/images/roki.png",
+			pts: 0
+		},
+		{
+			name:"Roku",
+			img:"assets/images/roku.png",
+			pts: 0
+		},
+		{
+			name:"Ryuta",
+			img:"assets/images/ryuta.png",
+			pts: 0
+		},
+		{
+			name:"Shimotsuki Rin",
+			img:"assets/images/shimotsukirin.png",
+			pts: 0
+		},
+		{
+			name:"Smoke",
+			img:"assets/images/smoke.png",
+			pts: 0
+		},
+		{
+			name:"Sora Hoshino",
+			img:"assets/images/sorahoshino.png",
+			pts: 0
+		},
+		{
+			name:"Sumire",
+			img:"assets/images/sumire.png",
+			pts: 0
+		},
+		{
+			name:"Usanuko",
+			img:"assets/images/usanuko.png",
+			pts: 0
+		},
+		{
+			name:"VENUS",
+			img:"assets/images/venus.png",
+			pts: 0
+		},
+		{
+			name:"Yamagata Marika",
+			img:"assets/images/yamagata.png",
+			pts: 0
+		},
+		{
+			name:"Yuli",
+			img:"assets/images/yuli.png",
+			pts: 0
+		},
+		{
+			name:"Zizz",
+			img:"assets/images/zizz.png",
+			pts: 0
+		},
+		{
+			name:"Akane",
+			img:"assets/images/akane.png",
+			pts: 0
+		},
+		{
+			name:"Date Kyouya",
+			img:"assets/images/date.png",
+			pts: 0
+		},
+		{
+			name:"Eclipse",
+			img:"assets/images/eclipse.png",
+			pts: 0
+		},
+		{
+			name:"Harpya",
+			img:"assets/images/harpya.png",
+			pts: 0
+		},
+		{
+			name:"Gerhard",
+			img:"assets/images/gerhard.png",
+			pts: 0
+		},
+		{
+			name:"Glutamine",
+			img:"assets/images/glutamine.png",
+			pts: 0
+		},
+		{
+			name:"iO-Lower",
+			img:"assets/images/io-lower.png",
+			pts: 0
+		},
+		{
+			name:"Jadeite",
+			img:"assets/images/jadeite.png",
+			pts: 0
+		},
+		{
+			name:"Kirishima Tsukasa",
+			img:"assets/images/tsukasa.png",
+			pts: 0
+		},
+		{
+			name:"Kiryu",
+			img:"assets/images/kiryu.png",
+			pts: 0
+		},
+		{
+			name:"Lazuli",
+			img:"assets/images/lazuli.png",
+			pts: 0
+		},
+		{
+			name:"Madoka",
+			img:"assets/images/madoka.png",
+			pts: 0
+		},
+		{
+			name:"Matsushita",
+			img:"assets/images/matsushita.png",
+			pts: 0
+		},
+		{
+			name:"Michiru",
+			img:"assets/images/michiru.png",
+			pts: 0
+		},
+		{
+			name:"Miyu",
+			img:"assets/images/miyu.png",
+			pts: 0
+		},
+		{
+			name:"Nicolas",
+			img:"assets/images/nicolas.png",
+			pts: 0
+		},
+		{
+			name:"Phantom",
+			img:"assets/images/phantom.png",
+			pts: 0
+		},
+		{
+			name:"Ranma",
+			img:"assets/images/ranma.png",
+			pts: 0
+		},
+		{
+			name:"Rars",
+			img:"assets/images/rars.png",
+			pts: 0
+		},
+		{
+			name:"Shinonome Kokona",
+			img:"assets/images/kokona.png",
+			pts: 0
+		},
+		{
+			name:"Shinonome Natsuhi",
+			img:"assets/images/natsuhi.png",
+			pts: 0
+		},
+		{
+			name:"Suiri",
+			img:"assets/images/suiri.png",
+			pts: 0
+		},
+		{
+			name:"Taiga",
+			img:"assets/images/taiga.png",
+			pts: 0
+		},
+		{
+			name:"Takuto",
+			img:"assets/images/takuto.png",
+			pts: 0
+		},
+		{
+			name:"Toa",
+			img:"assets/images/toa.png",
+			pts: 0
+		},
+		{
+			name:"Weiss",
+			img:"assets/images/weiss.png",
+			pts: 0
+		},
+		{
+			name:"Wolfgang",
+			img:"assets/images/wolfgang.png",
+			pts: 0
+		},
+		{
+			name:"Yuzuru",
+			img:"assets/images/yuzuru.png",
+			pts: 0
+		},
 
 
-	// ];
+	];
 
+	// popnUnsorted array length = 66
+
+	$('#result').hide();
 	$('#battle').hide();
 
 	$('#herewego').on('click', function(){
 
 		$('#battle').show();
 
-		$('#text').hide();
-	});
+		$('#result').show();
+		$('#battleNum').show();
 
-	var popnUnsorted = [
-		{
-			name: "retsu",
-			pts:0
-		},
-		{
-			name: "fuga",
-			pts:0
-		},
-		{
-			name:"hiumi",
-			pts:0
-		},
-		{
-			name:"rinka",
-			pts:0
-		}, 
-		{
-			name:"mzd",
-			pts:0
-		}
-	];
+		$('#ranks').hide();
+		$('#text').hide();
+		$('#tsugidoka').hide();
+	});
 
 	// SET UP VARS ///////////////////////////////////////
 
-	var notSorted = true;
-
 	// keep track of battle numbers
 	var battle = 0;
-
-	// how much percent sorted
-	var percentSorted = 0;
 	
 	// SORT FUNCTIONS ////////////////////////////////////////
 
 	var generateMatch = function(array){
 		// function to generate random matches
+
+		// add battle number here
+		$('#battleNum').html("<h2>Battle #" + battle + "</h2>");
+		battle++;
 
 		var r1 = Math.floor(Math.random() * popnUnsorted.length);
 		var r2 = Math.floor(Math.random() * popnUnsorted.length);
@@ -404,9 +374,11 @@ $(document).ready(function(){
 		if (r1 != r2) {
 			var firstOP = array[r1].name;
 			var firstOPpts = array[r1].pts;
+			var firstOPimg = array[r1].img;
 
 			var secondOP = array[r2].name;
-			var secondOPpts = array[r2].pts;			
+			var secondOPpts = array[r2].pts;
+			var secondOPimg = array[r2].img;			
 		}
 
 		else {
@@ -417,34 +389,52 @@ $(document).ready(function(){
 
 			var firstOP = array[r1].name;
 			var firstOPpts = array[r1].pts;
+			var firstOPimg = array[r1].img;
 
 			var secondOP = array[r2].name;
 			var secondOPpts = array[r2].pts;
+			var secondOPimg = array[r2].img
 		}
 
-		$('#fighter1').html(firstOP);
+		$('#fighter1').html("<img id='f1' src='" + firstOPimg + "'/><h3 id='f1name'>" + firstOP + "</h3>");
 
-		$('#fighter2').html(secondOP);
+		$('#fighter2').html("<img id='f2' src='" + secondOPimg + "'/><h3 id='f2name'>" + secondOP + "</h3>");
 
 	};
 
 	var finishedSorting = function(array) {
 		// function to check if the array has been sorted
 
+		var popnArray = array.map(function(char){
+			return char.pts;
+		});
 
+		var isDuplicate = popnArray.some(function(pts, idx){
+			return popnArray.indexOf(pts) != idx;
+		});
+
+		console.log("Duplicate points: " + isDuplicate);
+
+		return isDuplicate;
 	}
 
+	var notSorted = finishedSorting(popnUnsorted);	
+
+	// MAIN FUNCTION ///////////////////////////////////////////
+
+	// generate initial match
+	generateMatch(popnUnsorted);
 
 	// CLICK FUNCTIONS ///////////////////////////////////////////////
 
-	// opponent1 = +1 point
-	$('#fighter1').on('click', function(){
+	$('#blue').on('click', function(){
+
 		console.log("fighter1: +1pt");
 
 		// add point to character
 		for(var i = 0; i < popnUnsorted.length; i++) {
 
-			if (popnUnsorted[i].name === $('#fighter1').text()) {
+			if (popnUnsorted[i].name === $('#f1name').text()) {
 				popnUnsorted[i].pts += 1;
 
 				console.log(popnUnsorted[i].name + " now has " + popnUnsorted[i].pts + " points!");
@@ -453,50 +443,8 @@ $(document).ready(function(){
 
 		// generate new match
 		generateMatch(popnUnsorted);
-	});
 
-	// opponent2 = +1 point
-	$('#fighter2').on('click', function(){
-
-		// add points to characters
-		for(var i = 0; i < popnUnsorted.length; i++) {
-
-			if (popnUnsorted[i].name === $('#fighter2').text()) {
-				popnUnsorted[i].pts += 1;
-
-				console.log(popnUnsorted[i].name + " now has " + popnUnsorted[i].pts + " points!");
-			}
-
-		}
-
-		// generate new match
-		generateMatch(popnUnsorted);
-	});
-
-
-	$('#blue').on('click', function(){
-		// blue - love them both = +1 point to both
-		console.log("blue: +1pt to both");
-
-		// add points to characters
-		for(var i = 0; i < popnUnsorted.length; i++) {
-
-			if (popnUnsorted[i].name === $('#fighter1').text()) {
-				popnUnsorted[i].pts += 1;
-
-				console.log(popnUnsorted[i].name + " now has " + popnUnsorted[i].pts + " points!");
-			}
-
-			if (popnUnsorted[i].name === $('#fighter2').text()) {
-				popnUnsorted[i].pts += 1;
-
-				console.log(popnUnsorted[i].name + " now has " + popnUnsorted[i].pts + " points!");
-			}
-
-		}
-
-		// generate new match
-		generateMatch(popnUnsorted);
+		generateResults();
 	}); 
 	
 	$('#red').on('click', function(){
@@ -506,23 +454,18 @@ $(document).ready(function(){
 		// generate new match
 		generateMatch(popnUnsorted);
 
+		generateResults();
 	});
 
 	$('#green').on('click', function(){
-		// green - hate them both = -1 point to both
-		console.log("green: -1pt to both");
 
-		// subtract points from characters
+		console.log("fighter2: +1pt");
+
+		// add points to characters
 		for(var i = 0; i < popnUnsorted.length; i++) {
 
-			if (popnUnsorted[i].name === $('#fighter1').text()) {
-				popnUnsorted[i].pts -= 1;
-
-				console.log(popnUnsorted[i].name + " now has " + popnUnsorted[i].pts + " points!");
-			}
-
-			if (popnUnsorted[i].name === $('#fighter2').text()) {
-				popnUnsorted[i].pts -= 1;
+			if (popnUnsorted[i].name === $('#f2name').text()) {
+				popnUnsorted[i].pts += 1;
 
 				console.log(popnUnsorted[i].name + " now has " + popnUnsorted[i].pts + " points!");
 			}
@@ -531,21 +474,23 @@ $(document).ready(function(){
 
 		// generate new match
 		generateMatch(popnUnsorted);
+
+		generateResults();
 	});
-
-	// MAIN FUNCTION ///////////////////////////////////////////
-
-	// generate initial match
-	generateMatch(popnUnsorted);
-
-	// var popnSorted = popnUnsorted.sort(function(a,b){
-	// 	return a.value - b.value;
-	// });
-
-	// console.log(popnSorted);
 
 	// GENERATE RESULTS ///////////////////////////////////////////////
 
-	// table of results
-	// rank - character img/name - number of points
+	var generateResults = function(){
+		
+		if (!notSorted) {
+
+			// until the popns are sorted, this table won't appear
+			$('#battle').hide();
+			$('#text').hide();
+
+			// table of results
+			// rank - character img/name - number of points		
+		}
+	};
+
 });

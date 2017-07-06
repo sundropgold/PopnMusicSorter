@@ -2,13 +2,22 @@
 body {
 	box-sizing:border-box;
 	background-color:#fff4c8;
-	overflow:scroll;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+div.container{
+	width:100%;
+	margin:0 auto;
 }
 
 div.col-md-12 {
-
 	width:600px;
 	margin:0 auto;
+}
+
+div.col-md-6 {
+
 }
 
 div.row {
@@ -17,12 +26,20 @@ div.row {
 }
 
 div#text {
-	margin-top:42%;
+	margin-top:28%;
 	text-align:center;
 }
 
 div#battle {
-	margin-top:22%;
+	width:100%;
+	margin:0 auto;
+	margin-top:1%;
+}
+
+div#result {
+	margin-top:10%;
+	margin-bottom:0;
+	text-align:center;
 }
 
 /* ********** NAVBAR ********** */
@@ -38,14 +55,40 @@ div#battle {
 	position:relative;
 
 	height:auto;
-	width:300px;
+	width:200px;
 	margin-left:50px;
+}
+
+#logo:hover{
+	opacity:.8;
+}
+
+/* ********** SCROLL STYLING ********** */
+::-webkit-scrollbar {
+	width:10px;
+}
+
+::-webkit-scrollbar:horizontal {
+	width:0px;
+}
+  
+::-webkit-scrollbar-track {
+      background-color: #000;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+	background-color: #78c3eb;
 }
 
 /* ********** TEXT ********** */
 p {
 	font-family: 'Cuprum', sans-serif;
 	font-size:20px;
+}
+
+h2 {
+	font-family: 'Cuprum', sans-serif;
+	font-size:45px;
 }
 
 #herewego {
@@ -61,20 +104,63 @@ p {
 	border-color:#78c3eb;
 }
 
+#f1name {
+	text-align:center;
+}
+
+#f2name {
+	text-align:center;
+}
+
+h3 {
+	font-family: 'Cuprum', sans-serif;
+	font-size:35px;
+}
+
 /* ********** IMAGES ********** */
 #tsugidoka {
-	position:relative;
+	position:absolute;
 	bottom:0;
-	right:50px;
+	right:5%;
 	width:220px;
 }
 
 .popkun {
+	position:relative;
 	width:70px;
-	margin:2%;
+	margin:3% 5% 3% 5%;
+	padding-top:4%;
+
 }
 
 .popkun:hover {
 	width:80px;
 	margin:1%;
+}
+
+#f1, #f2 {
+	height:400px;
+	width:auto;
+	overflow:hidden;
+	padding:10%;
+}
+
+#f1 {
+	position: relative;
+	left:0;
+}
+
+#f2 {
+	position: relative;
+	right:0;
+}
+
+#fighter1 {
+	position:relative;
+	align-content: center;
+}
+
+#fighter2 {
+	position:relative;
+	align-content: center;
 }

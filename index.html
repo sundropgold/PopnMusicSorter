@@ -36,57 +36,68 @@
 				<div class="col-md-12" id="text">
 					<p>Welcome to the Pop'n Music Character Sorter for Lapistoria! Choose your favorite between characters each battle until your character sorter is completely determined.</p>
 
-					<p>Instructions: Click the picture of the character to choose a character. Click the blue Pop-kun if you love both the characters. Click the red Pop-kun if you're neutral to both characters. Click the green Pop-kun if you dislike both the characters.</p>
+					<p>Instructions: Click the blue Pop-kun below the associated character if you prefer this character. Click the red Pop-kun if you're neutral/dislike both characters. Click the green Pop-kun below the associated character if you prefer this character.</p>
 
 					<p><big>Are you ready?</big></p>
 
 					<button id="herewego" class="btn">HERE WE GO!</button>
 				</div>
+
 			</div>
 
-			<div id="battle" class="row">
+			<div id="result" class="row">
 
-				<!-- Fighter 1-->
-				<div class="col-md-4">
-					<div id="fighter1">
-			
-					</div>	
+				<div class="col-md-12" id="battleNum">
 				</div>
 
-				<!-- Options -->
-				<div class="col-md-4">
+				<div id="ranks" class="col-md-12">
+				</div>
+
+			</div>
+
+			<div id="battle">
+
+				<div class="row">
+
+					<!-- Fighter 1-->
+					<div class="col-md-6">
+						<div id="fighter1">
+				
+						</div>	
+					</div>
+
+					<!-- Fighter 2-->
+					<div class="col-md-6">
+						<div id="fighter2">
+						</div>
+					</div>
+				</div>
+
+				<div class="row" id="popkuns">
+
+					<!-- Options -->
 
 					<!-- Love Both -->
-					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-4">
 							<img id="blue" class="popkun" src="assets/images/bluepopkun.png"/>
 						</div>
-					</div>
+					
 
 					<!-- Neutral Both -->
-					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-4">
 							<img id="red" class="popkun" src="assets/images/redpopkun.png"/>
 						</div>
-					</div>
 
 					<!-- Dislike Both -->
-					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-4">
 							<img id="green" class="popkun" src="assets/images/greenpopkun.png"/>
 						</div>
-					</div>
 
 				</div>
 
-				<!-- Fighter 2-->
-				<div class="col-md-4">
-					<div id="fighter2">
-					</div>
-				</div>
-			</div>
-	
-			<img id="tsugidoka" src="assets/images/tsugidoka.png"/>				
+			</div> <!-- battle -->	
+
+			<img id="tsugidoka" src="assets/images/tsugidoka.png"/>		
 
 		</div> <!-- container -->
 
