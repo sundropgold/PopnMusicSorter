@@ -405,17 +405,31 @@ $(document).ready(function(){
 	var finishedSorting = function(array) {
 		// function to check if the array has been sorted
 
+		var unsorted = true;
+
+		// map the characters' points
 		var popnArray = array.map(function(char){
 			return char.pts;
 		});
 
-		var isDuplicate = popnArray.some(function(pts, idx){
-			return popnArray.indexOf(pts) != idx;
-		});
+		// rather than checking if there are duplicate points
+		// check if any of the character points are >=40
+		for (var i = 0; i < popnArray.length; i++) {
 
-		console.log("Duplicate points: " + isDuplicate);
+			if (popnArray[i].pts >= 5) { // test number
+				unsorted = false;
+			}
 
-		return isDuplicate;
+			else if (battle >= 420) {
+				// alternatively, if the battle reaches 420,
+				unsorted = false;
+			}
+
+		}
+
+		// if so, it's finished sorting
+
+		return unsorted;
 	}
 
 	var notSorted = finishedSorting(popnUnsorted);	
@@ -482,13 +496,17 @@ $(document).ready(function(){
 
 	var generateResults = function(){
 		
+		console.log("");
+
 		if (!notSorted) {
 
 			// until the popns are sorted, this table won't appear
 			$('#battle').hide();
 			$('#text').hide();
 
-			// table of results
+			// bubble sort and map the characters into a popnSorted array
+
+			// table of results using popnSorted array
 			// rank - character img/name - number of points		
 		}
 	};

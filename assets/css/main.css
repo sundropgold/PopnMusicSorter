@@ -91,7 +91,7 @@ h2 {
 	font-size:45px;
 }
 
-#herewego {
+#herewego, #submitSort {
 	font-family: 'Cuprum', sans-serif;
 	font-size:20px;
 	background-color:transparent;
@@ -100,7 +100,7 @@ h2 {
 	border-style:solid;
 }
 
-#herewego:hover {
+#herewego:hover, #submitSort:hover {
 	border-color:#78c3eb;
 }
 
@@ -163,4 +163,101 @@ h3 {
 #fighter2 {
 	position:relative;
 	align-content: center;
+}
+
+/* ********** MEDIA QUERIES ********** */
+
+@media screen and (min-width:1074px) {
+
+	/* TEXT PAGE */
+	div#text {
+		margin-top:30%;
+		text-align:center;
+		margin-bottom:30%;
+	}
+
+	/* SORTING PAGE */	
+}
+
+@media screen and (max-width: 1073px) {
+
+	/* TEXT PAGE */
+	div#text {
+		margin-top:40%;
+		text-align:center;
+		margin-bottom:30%;
+	}
+
+	/* SORTING PAGE */
+}
+
+@media screen and (min-width:685px) and (max-width:894px) {
+
+	/* TEXT PAGE */
+	div#text {
+		margin-top:45%;
+		width:100%;
+		text-align:center;
+		margin-bottom:30%;
+	}
+
+	/* SORTING PAGE */
+}
+
+@media screen and (min-width:628px) and (max-width: 684px){
+
+	/* TEXT PAGE */
+	div#text {
+		margin-top:55%;
+		width:100%;
+		text-align:center;
+		margin-bottom:30%;
+	}
+
+	#tsugidoka {
+		display:none;
+	}
+
+	/* SORTING PAGE */
+}
+
+@media screen and (max-width:627px){
+
+	/* TEXT PAGE */
+	div#text {
+		margin-top:90%;
+		width:100%;
+		text-align:center;
+		margin-bottom:30%;
+	}
+
+	#tsugidoka {
+		display:none;
+	}
+
+	p {
+		font-family: 'Cuprum', sans-serif;
+		font-size:18px;
+	}
+
+	h2 {
+		font-family: 'Cuprum', sans-serif;
+		font-size:35px;
+	}
+
+	#herewego, #submitSort {
+		font-family: 'Cuprum', sans-serif;
+		font-size:15px;
+		background-color:transparent;
+		border-color:#6bb75e;
+		border-width:2px;
+		border-style:solid;
+	}
+
+	#herewego:hover, #submitSort:hover {
+		border-color:#78c3eb;
+	}
+
+	/* SORTING PAGE */
+
 }
